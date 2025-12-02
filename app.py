@@ -22,6 +22,7 @@ user_data=st.chat_input("user_message")
 if user_data:
     st.session_state["memory"].append(("human",user_data))
 
+
     output=cm.invoke(st.session_state["memory"])
 
     st.session_state["memory"].append(("ai",output.content))
